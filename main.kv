@@ -1,0 +1,30 @@
+<MainWindow>
+    id: main_win
+    orientation: "vertical"
+    MDBoxLayout:
+        ScreenManager:
+            id: scrn_mngr
+            Screen:
+                id: scrn_1
+                name: "scrn_1"
+                MDBoxLayout:
+                    canvas.before:
+                        Color:
+                            rgba: 1, 0, 0, 1
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+            Screen:
+                id: scrn_2
+                name: "scrn_2"
+                MDBoxLayout:
+                    canvas.before:
+                        Color:
+                            rgba: 0, 0, 1, 1
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+    MDRaisedButton:
+        size_hint_x: 1
+        text: "Change Screen"
+        on_release: root.change_screen()
